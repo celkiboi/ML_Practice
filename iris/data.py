@@ -30,7 +30,7 @@ for name in iris['feature_names']:
 data = pd.DataFrame(iris_dict)
 data['target'] = iris['target_names'][data['target']]
 
-print(data)
+#print(data)
 
 # 0.0.7
 
@@ -67,6 +67,7 @@ print(f'number of setosa with above average sepal width: {above_average_sepal_wi
 
 # 0.0.8
 
+
 # 0.0.9
 input_variables = iris['feature_names']
 output_variables = ['target']
@@ -74,7 +75,7 @@ output_variables = ['target']
 X = data[input_variables]
 y = data[output_variables]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=54)
 
 # label_encoder = LabelEncoder()
 # y_train_encoded = label_encoder.fit_transform(y_train)
